@@ -32,12 +32,12 @@
                 <ul class="flex space-x-3 text-base items-center">
                     <li>
                         <div class="py-2 px-2.5 rounded-lg hover:bg-gray-100 text-slate-500">
-                            <nuxt-link :to="{path: '/category'}">카테고리</nuxt-link>
+                            <nuxt-link :to="{path: '/courses'}">강의별로 보기</nuxt-link>
                         </div>
                     </li>
                     <li>
                         <div class="py-2 px-2.5 rounded-lg hover:bg-gray-100 text-slate-500">
-                            <nuxt-link :to="{path: '/members'}">멤버</nuxt-link>
+                            <nuxt-link :to="{path: '/articles'}">아티클별로 보기</nuxt-link>
                         </div>
                     </li>
                     <li>
@@ -78,13 +78,13 @@
                 </div>
                 
                 <ul class="divide-y font-sans mt-4">
-                <li><nuxt-link to='/' @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">아티클</nuxt-link></li>
-                <li><nuxt-link :to="{path: 'category'}" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">카테고리</nuxt-link></li>
-                <li><nuxt-link :to="{path: 'members'}" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">멤버</nuxt-link></li>
-                <li><a href="https://github.com/Team-COSADAMA" target="blank" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">깃헙</a></li>
-                <li><a href="http://www.cosadama.com" target="blank" @click="isOpen = false" class="mt-8 inline-block flex justify-center"><FooterLogo/></a></li>
+                <li><nuxt-link to="/" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">홈</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/courses'}" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">강의별로 보기</nuxt-link></li>
+                <li><nuxt-link :to="{path: '/articles'}" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">아티클별로 보기</nuxt-link></li>
+                <li><a href="https://github.com/thepenielcho" target="blank" @click="isOpen = false" class="my-4 px-2 inline-block text-gray-700">깃헙</a></li>
+                <li><a href="http://www.blog.penielcho.com" target="blank" @click="isOpen = false" class="mt-8 inline-block flex justify-center"><FooterLogo/></a></li>
                 </ul>
-                <div @click="isOpen = false" class="pt-4 my-4 inline-block text-xs font-normal text-gray-500 text-center flex justify-center">© 2020 COSADAMA, <br/> All Rights Reserved.</div>
+                <div @click="isOpen = false" class="pt-2 my-3 inline-block text-xs font-normal text-gray-500 text-center flex justify-center">© 2022 Peniel Cho, <br/> All Rights Reserved.</div>
 
             </aside>
 

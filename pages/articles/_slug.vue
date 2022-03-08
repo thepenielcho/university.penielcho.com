@@ -1,7 +1,7 @@
 <template>
     <div class="related max-w-5xl mx-auto py-10 md:py-16">
 
-        <nuxt-link :to='`/course/${course.slug}`' class="block mx-auto hover:underline text-base md:text-lg text-gray-400 text-center mb-2">{{article.course}}</nuxt-link>
+        <nuxt-link :to='`/courses/${course[0].slug}`' class="block mx-auto hover:underline text-base md:text-lg text-gray-400 text-center mb-2">{{article.course}}</nuxt-link>
         <h1 class="custom-text leading-snug md:leading-normal px-5 md:px-0 mb-2 text-2xl md:text-4xl text-center font-semibold text-gray-700">{{article.title}}</h1>
         <p class="text-base md:text-lg text-gray-500 text-center mb-6 md:mb-10">{{formatDate(article.createdAt)}} · by 조용주</p>
 
@@ -20,19 +20,17 @@ export default {
         const article = await $content('articles', params.slug)
         .fetch();
 
-        const articleCourse = article.course
-
-        const course = await $content('course', params.slug)
-        .where({title: articleCourse})
+        const course = await $content('courses')
+        .where({title: `${article.course}`})
         .fetch();
 
         const [prev, next] = await $content('articles')
         .only(['title', 'slug'])
         .sortBy('createdAt', 'asc')
         .surround(params.slug)
-        .fetch()
+        .fetch();
 
-        return { article, prev, next, course, articleCourse }
+        return { article, course, prev, next }
     },
     methods: {
         formatDate(date) {
@@ -74,12 +72,12 @@ export default {
             hid: 'og:image',
             property: 'og:image',
             // content: this.article.img
-            content: `https://raw.githubusercontent.com/Team-COSADAMA/Blog/main/static/${this.article.slug}/${this.article.img}`
+            content: 'https://raw.githubusercontent.com/thepenielcho/university.penielcho.com/main/static/og_image.png'
             },
             {
             hid: 'og:image:secure_url',
             property: 'og:image:secure_url',
-            content: `https://raw.githubusercontent.com/Team-COSADAMA/Blog/main/static/${this.article.slug}/${this.article.img}`
+            content: 'https://raw.githubusercontent.com/thepenielcho/university.penielcho.com/main/static/og_image.png'
             },
             {
             hid: 'og:image:alt',
@@ -89,7 +87,7 @@ export default {
             {
             hid: 'og:url',
             name: 'og:url',
-            content: `https://www.blog.cosadama.com/articles/${this.$route.params.slug}`
+            content: `https://university.penielcho.com/articles/${this.$route.params.slug}`
             },
             ],
         }

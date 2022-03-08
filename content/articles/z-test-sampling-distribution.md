@@ -2,7 +2,7 @@
 title: 표집분포를 이용한 Z검증
 description: Z검증 방법 중 표집분포를 이용한 Z검증 방법에 대해 알아보자.
 slug: z-test-sampling-distribution
-course: 사회통계론
+course: '사회통계론'
 ---
 
 ## 표본, 표집 짚고 넘어가기

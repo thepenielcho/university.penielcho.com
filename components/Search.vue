@@ -1,14 +1,14 @@
 <template>
       <div>
-        <div class="shadow-sm md:shadow w-full rounded-xl border-2 flex items-center mb-4 py-2.5 md:py-3.5 pr-4">
+        <div class="shadow-sm md:shadow w-full rounded-full border-2 flex items-center mb-4 py-2.5 md:py-3.5 pr-4">
             <SearchIcon />
-            <input placeholder="다양한 주제의 글을 검색해보세요" v-model="query" type="search" autocomplete="off" 
-            class="flex-auto text-base text-gray-600 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
+            <input placeholder="암거나 검색해보세요 찾으시는 건 없겠지만..." v-model="query" type="search" autocomplete="off" 
+            class="flex-auto text-sm md:text-base text-gray-600 pr-3.5 md:pr-6 flex items-center placeholder-text-gray-400" />
         </div>
 
-        <ul v-if="articles.length" class="shadow-sm md:shadow rounded-lg border-2 px-4">
+        <ul v-if="articles.length" class="shadow-sm md:shadow rounded-md border-2 px-4">
           <li class="text-gray-500 py-2.5 md:py-3.5 border-b text-sm md:text-base lastborder" v-for="article of articles" :key="article.slug">
-            <NuxtLink :to="{ name: 'slug', params: { slug: article.slug } }">{{ article.title }}</NuxtLink>
+            <nuxt-link :to='`/articles/${article.slug}`'>{{ article.title }}</nuxt-link>
           </li>
         </ul>
       </div>
@@ -29,10 +29,9 @@ export default {
         return
       }
 
-      this.articles = await this.$content('blog')
+      this.articles = await this.$content('articles')
         .only(['title', 'slug'])
         .sortBy('createdAt', 'asc')
-        .limit(15)
         .search(query)
         .fetch()
     }
