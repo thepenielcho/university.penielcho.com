@@ -7,8 +7,8 @@
                 <ul class="w-25 md:w-36 md:ml-0 md:m-0">
                     <li class="mb-3 font-medium text-gray-300">University</li>
                     <li class="mb-1.5 font-normal text-gray-500 hover:underline"><nuxt-link to="/">홈</nuxt-link></li>
-                    <li class="mb-1.5 font-normal text-gray-500 hover:underline"> <nuxt-link :to="{path: '/courses'}">아티클별</nuxt-link> </li>
-                    <li class="mb-1.5 font-normal text-gray-500 hover:underline"> <nuxt-link :to="{path: '/articles'}">강의별</nuxt-link> </li>
+                    <li class="mb-1.5 font-normal text-gray-500 hover:underline"> <nuxt-link :to="{path: '/articles'}">아티클별</nuxt-link> </li>
+                    <li class="mb-1.5 font-normal text-gray-500 hover:underline"> <nuxt-link :to="{path: '/courses'}">강의별</nuxt-link> </li>
                 </ul>
 
                 <ul class="w-25 md:w-36 md:ml-0 md:m-0">
