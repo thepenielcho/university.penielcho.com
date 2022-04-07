@@ -51,7 +51,7 @@ export default {
             {
                 hid: 't-type',
                 name: 'twitter:card',
-                content: 'summary_large_image'
+                content: 'summary'
             },
             {
             hid: 'og-type',
