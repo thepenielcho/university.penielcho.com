@@ -1,8 +1,8 @@
 ---
 title: 러시아의 우크라이나 침공 분석
 description: 러시아의 우크라이나 침공, 세계 1차 대전과 어떻게 유사할까? 중국-대만 문제에는 어떤 영향을 미칠까?
-slug: new-waves-socio
-course: 사회통계론
+slug: new-waves-101
+course: 사회변동과 미래사회
 ---
 
 # **러시아의 우크라이나 침공 분석**
