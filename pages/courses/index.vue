@@ -1,7 +1,7 @@
 <template>
 <div>
     <div class="relative">
-        <div class="bg-img section w-full py-48 sm:py-64 md:py-72 xl:py-80 inline-block" style="background-image: url(main.png)"></div>
+        <div class="bg-img section w-full py-48 sm:py-64 md:py-72 xl:py-80 inline-block" style="background-image: url(main_1.jpg)"></div>
         <div class="absolute bottom-0 w-full h-full bg-gradient-to-t from-zinc-800"></div>
         <div class="absolute bottom-0 w-full">
         <div class="max-w-7xl mx-auto pb-6 md:pb-14 px-6 md:px-6">
