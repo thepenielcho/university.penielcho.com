@@ -1,6 +1,6 @@
 ---
 title: '근대와 문명, 문화'
-description: 문화란 무엇일까?
+description: 근대란 뭘까? 문명과 문화는 어떻게 다를까?
 slug: culture-socio-02
 course: 문화사회학
 ---
