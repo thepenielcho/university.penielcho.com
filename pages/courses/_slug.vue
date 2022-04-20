@@ -60,7 +60,7 @@ export default {
     },
     head() {
         return {
-            title: this.course.title,
+            title: `${this.course.title} | TIL University`,
             htmlAttrs: {
             lang: 'ko'
             },
@@ -80,7 +80,7 @@ export default {
             {
             hid: 'og:title',
             property: 'og:title',
-            content: this.course.title
+            content: `${this.course.title} | TIL University`
             },
             {
             hid: 'og:description',
@@ -106,7 +106,7 @@ export default {
             {
             hid: 'og:url',
             name: 'og:url',
-            content: `https://university.penielcho.com/courses/${this.$route.params.slug}`
+            content: `https://university.penielcho.com/courses/${this.course.slug}`
             },
             ],
         }
