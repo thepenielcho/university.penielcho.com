@@ -57,7 +57,60 @@ export default {
         const options = { year: 'numeric', month: 'long', day: 'numeric' }
         return new Date(date).toLocaleDateString('ko', options)
         },
-    }
+    },
+    head() {
+        return {
+            title: this.course.title,
+            htmlAttrs: {
+            lang: 'ko'
+            },
+            meta: [
+            { charset: 'utf-8' },
+            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+            {
+                hid: 't-type',
+                name: 'twitter:card',
+                content: 'summary'
+            },
+            {
+            hid: 'og-type',
+            property: 'og:type',
+            content: 'website'
+            },
+            {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.course.title
+            },
+            {
+            hid: 'og:description',
+            property: 'og:description',
+            content: this.course.description
+            },
+            {
+            hid: 'og:image',
+            property: 'og:image',
+            // content: this.article.img
+            content: `https://raw.githubusercontent.com/thepenielcho/university.penielcho.com/main/static/${this.course.img}`
+            },
+            {
+            hid: 'og:image:secure_url',
+            property: 'og:image:secure_url',
+            content: `https://raw.githubusercontent.com/thepenielcho/university.penielcho.com/main/static/${this.course.img}`
+            },
+            {
+            hid: 'og:image:alt',
+            property: 'og:image:alt',
+            content: 'article image'
+            },
+            {
+            hid: 'og:url',
+            name: 'og:url',
+            content: `https://university.penielcho.com/courses/${this.$route.params.slug}`
+            },
+            ],
+        }
+    },
 }
 </script>
 
