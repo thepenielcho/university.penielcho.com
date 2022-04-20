@@ -33,7 +33,7 @@
         </div>
 
 
-    </div>
+    </div> 
 </template>
 
 <script>
@@ -46,6 +46,7 @@ export default {
         const courseKR = course.title;
 
         const articles = await $content('articles', params)
+        .sortBy('createdAt', 'desc')
         .where({course: courseKR})
         .fetch();
 
