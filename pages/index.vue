@@ -9,7 +9,7 @@
                 기록은 필수!
             </div>
             <div class="text-slate-300 text-sm md:text-base keep-all">
-                굳이 대학 전공 수업을 온라인에 기록하는 이유는 안 까먹으려고요... <br class="hidden md:inline"/> 요즘은 그냥 회고 안 하면 아무것도 안 한 거다라는 생각으로 살고 있습니다.ㅎ
+                현재는 운영되지 않는 블로그입니다.
             </div>
         </div>
         </div>
